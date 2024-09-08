@@ -1,18 +1,16 @@
 {
-  "name": "@acme/ui",
+  "name": "@AtharvaJoshi16/easylib",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/YOUR_GITHUB_USERNAME"
+  },
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    }
+    "./button": "./src/button.tsx"
   },
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
@@ -27,8 +25,5 @@
   },
   "dependencies": {
     "react": "^18.2.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
